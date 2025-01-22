@@ -19,10 +19,10 @@
   Anthony Schwab, lukas-h on github, Jacobus berghoefer, and the Xpert Learning Assistant
 
   ## usage
-  to use this application, install the required dependencies and open your prefered terminal, navigate the correct file path and run the index.js file, this will give you your prompts to respond to.
+  to use this application, install the required dependencies and open your prefered terminal, navigate the correct file path and run the index.js file, this will give you the prompts to respond to.
   
   ## test
-  the easiest way to test this application would be to run the index.js file and answer the questions. 
+  the easiest way to test this application would be to run the index.js file and answer the questions then check your results. 
 
   ## license
   MIT license: 
@@ -31,3 +31,6 @@ https://opensource.org/licenses/MIT
   ## questions
   feel free to visit my github https://github.com/blakeroband
   if you have questions, please contact me through my email: Blakeroband@gmail.com
+
+  ## link to submission video
+  https://drive.google.com/file/d/1L3_2kU8k67kcuQ3acH0ncYVtmn1D3X1D/view?usp=sharing
