@@ -28,3 +28,4 @@ THEN I am taken to the corresponding section of the README
         Anthony Schwab
         Xpert Learning Assistant
         Lukas-h on GitHub
+        Jacobus Berghoefer

@@ -1,32 +1,33 @@
 # README
 
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  https://img.shields.io/badge/License-MIT-yellow.svg
 
   ## Description
-  project builds a readme
+  this project is a README.md files generator that will fill a professional quality README based on user input
 
   ## Table of Contents
-  - [instalation](#installation)
+  - [installation](#installation)
   - [contributions](#contributions)
   - [usage](#usage)
   - [test](#test)
   - [license](#license)
 
   ## installation
-  test
+  to install this project, simply open the code in your code editor and install the required files (inquirer, fs)
 
   ## contributions
-  test
+  Anthony Schwab, lukas-h on github, Jacobus berghoefer, and the Xpert Learning Assistant
 
   ## usage
-  test
+  to use this application, install the required dependencies and open your prefered terminal, navigate the correct file path and run the index.js file, this will give you your prompts to respond to.
   
   ## test
-  test
+  the easiest way to test this application would be to run the index.js file and answer the questions. 
 
   ## license
-  MIT license
-
+  MIT license: 
+https://opensource.org/licenses/MIT
+  
   ## questions
-  feel free to visit my github https://github.com/test
-  if you have questions, please contact me through my email: test
+  feel free to visit my github https://github.com/blakeroband
+  if you have questions, please contact me through my email: Blakeroband@gmail.com

@@ -1,5 +1,6 @@
 import inquirer from "inquirer";
 import fs from "fs";
+import { resourceLimits } from "worker_threads";
 
 // // prompt for information about application
 inquirer
@@ -75,17 +76,44 @@ function licenseBadge(license) {
     case `Apache License 2.0`:
       return `https://img.shields.io/badge/License-Apache_2.0-blue.svg`;
     case `GNU General Public License v3.0`:
-      return `https://img.shields.io/badge/License-GPLv3-blue.svg)`;
+      return `https://img.shields.io/badge/License-GPLv3-blue.svg`;
     case `MIT license`:
       return `https://img.shields.io/badge/License-MIT-yellow.svg`;
     case `BSD 2-Clause "simplified`:
-      return `[![License](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)`;
+      return `https://img.shields.io/badge/License-BSD_2--Clause-orange.svg`;
     case `BSD 3-Clause "new" or "revised" license`:
-      return `[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)`;
+      return `https://img.shields.io/badge/License-BSD_3--Clause-blue.svg`;
     case `Boost Software license 1.0`:
-      return `[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)`;
+      return `https://img.shields.io/badge/License-Boost_1.0-lightblue.svg`;
     case `Creative Commons Zero v1.0 Universal`:
-      return `[![License: CC0-1.0](https://licensebuttons.net/l/zero/1.0/80x15.png)](http://creativecommons.org/publicdomain/zero/1.0/)`;
+      return `https://licensebuttons.net/l/zero/1.0/80x15.png`;
+    default:
+      return ``;
+  }
+}
+function licenseText(license) {
+  switch(license) {
+    case `Apache License 2.0`:
+      return `Apache License 2.0: 
+https://www.apache.org/licenses/LICENSE-2.0.txt`;
+    case `GNU General Public License v3.0`:
+      return `GNU General Public License v3.0: 
+https://www.gnu.org/licenses/gpl-3.0.txt`;
+    case `MIT license`:
+      return `MIT license: 
+https://opensource.org/licenses/MIT`;
+    case `BSD 2-Clause "simplified`:
+      return `BSD 2-Clause 'Simplified' License: 
+https://opensource.org/licenses/BSD-2-Clause`;
+    case `BSD 3-Clause "new" or "revised" license`:
+      return `BSD 3-Clause 'New' or 'Revised' License: 
+https://opensource.org/licenses/BSD-3-Clause`;
+    case `Boost Software license 1.0`:
+      return `Boost Software License 1.0: 
+https://www.boost.org/LICENSE_1_0.txt`;
+    case `Creative Commons Zero v1.0 Universal`:
+      return `Creative Commons Zero v1.0 Universal: 
+https://creativecommons.org/publicdomain/zero/1.0/legalcode`;
     default:
       return ``;
   }
@@ -96,6 +124,7 @@ function licenseBadge(license) {
 // one big string
 function generateMarkdown(data) {
   const badge = licenseBadge(data.license)
+  const text = licenseText(data.license)
   return `# ${data.title}
 
   ${badge}
@@ -104,7 +133,7 @@ function generateMarkdown(data) {
   ${data.description}
 
   ## Table of Contents
-  - [instalation](#installation)
+  - [installation](#installation)
   - [contributions](#contributions)
   - [usage](#usage)
   - [test](#test)
@@ -123,8 +152,8 @@ function generateMarkdown(data) {
   ${data.test}
 
   ## license
-  ${data.license}
-
+  ${text}
+  
   ## questions
   feel free to visit my github https://github.com/${data.Github}
   if you have questions, please contact me through my email: ${data.email}`
