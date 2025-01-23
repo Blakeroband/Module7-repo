@@ -16,7 +16,10 @@
   to install this project, simply open the code in your code editor and install the required files (inquirer, fs)
 
   ## contributions
-  Anthony Schwab, lukas-h on github, Jacobus berghoefer, and the Xpert Learning Assistant
+  Anthony Schwab, - helped with the license array
+  lukas-h on github, - had a very useful link to the license text content
+   Jacobus berghoefer, - helped format the badge so it showed correctly 
+   and the Xpert Learning Assistant - helped write the code that populates the readme (the giant string)
 
   ## usage
   to use this application, install the required dependencies and open your prefered terminal, navigate the correct file path and run the index.js file, this will give you the prompts to respond to.
